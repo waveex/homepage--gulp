@@ -1,157 +1,144 @@
 @import "_normalize";
 @import "_variables";
-
- 
 .about {
-  color: #FFCA3A;
+  color: #ffca3a;
   grid-area: about;
 }
 
 .about__paragraph {
-  color: #B33951;
+  color: #b33951;
   padding: 0 0 0 16px;
 }
 
 .article {
-  color: #B33951;
-}
-
-.article__header {
-  color: #FFCA3A;
+  color: #b33951;
+  &__header {
+    color: $textcolor;
+  }
 }
 
 body {
-  background: #F1FFC4;
+  background: $background;
   height: 100%;
-max-height: 1vw;
-
+  max-height: 1vw;
 }
 .content {
   grid-area: content;
 }
-.diary {}
-
-.diary__Header {
-  color: #FFCA3A;
-}
-
-.diary__Paragraph {
-  color: #B33951;
-  padding-left: 16px;
-}
-
-.footer {
-  color: rgb(238, 188, 6);
-}
-
-.navigation {
-  text-decoration: none;
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: fixed;
-  box-sizing: border-box;
-  background: #FFCAAF;
-}
-
-.navigation__list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
-
-@media  (max-width: 356px) {
-  .navigation__list {
-      flex-direction: column;
-      display: none;  
+.dairy {
+  &__Paragraph {
+    color: #b33951;
+    padding-left: 16px;
+    &__Header {
+      color: $textcolor;
+    }
   }
-  .navigation__button {
+
+  .footer {
+    color: $textcolor;
+  }
+
+  .navigation {
+    text-decoration: none;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    box-sizing: border-box;
+    background: #ffcaaf;
+    &__list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      &--visible {
+        display: flex;
+      }
+    }
+    &__button {
+      border-style: none;
+      background: none;
+    }
+    &__footer {
+      position: fixed;
+
+      bottom: 10px;
+      right: 5px;
+      width: 100%;
+      max-width: 100px;
+      font-size: 17px;
+      text-decoration: none;
+      color: #fd624d;
+      background: transparentize($color: hotpink, $amount: 0.2);
+      border-radius: 13px;
+      justify-items: center;
+    }
+    &__link {
+      text-decoration: none;
+      color: #fd624d;
+      margin-right: 10px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .navigation__list {
+      flex-direction: column;
+      display: none;
+    }
+    .navigation__button {
       position: fixed;
       box-sizing: border-box;
       top: 6px;
       right: 6px;
-
+    }
   }
-.navigation__list--visible {
-  display: flex;
-}   
-}
-@media  (min-width: 356px) {
-.navigation__button {
-    display: none;
 
-}
-}
+  @media (min-width: 651px) {
+    .navigation__button {
+      display: none;
+    }
+  }
 
+  .main {
+    width: 100%;
+    max-width: 500px;
+    margin: 32px auto;
+    padding: 70px;
+    display: grid;
+    grid-template-areas:
+      "header  header"
+      "about content  ";
+    grid-template-columns: 1fr 1fr;
+    grid-column: 2 / 1;
+  }
 
-.navigation__link {
-  text-decoration: none;
-  color: #FD624D;
-  margin-right: 10px;
-}
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+  }
 
-.navigation__footer {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  width: 100%;
-  max-width: 150px;
-  text-decoration: none;
-  color: #FD624D;
-}
+  .header {
+    grid-area: header;
+    justify-content: center;
+    &__tittle {
+      text-align: center;
+      color: $textcolor;
+      font-size: 32px;
+    }
+  }
 
-.main {
-  width: 100%;
-  max-width: 500px;
-  margin: 32px auto;
-  padding: 70px;
-  display: grid;
-  grid-template-areas: "header  header"
-  "about content  ";
-  grid-template-columns:  1fr   1fr;
-  grid-column: 2 / 1; 
-  
+  .majkel__img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: auto;
+  }
 
-   
-}
-
-.grid {
-  display: grid;
-  grid-template-columns:  1fr 1fr;
-  grid-column-gap: 12px;
-  grid-row-gap: 12px;
-}
-
-
-
-.header {
- grid-area: header;
- justify-content: center;
-
-}
-
-.header__tittle { 
-  text-align: center;
-    color: rgb(238, 188, 6);
-  font-size: 32px;
-   
-}
-
-.majkel__img {
-  width: 100%;
-  max-width: 400px;
-  display: block;
-  margin: auto;
-}
-
-.img {
-  width: 100%;
-  max-width: 450px;
-}
-
-.navigation__button {
-  border-style: none;
-  background: none;
+  .img {
+    width: 100%;
+    max-width: 450px;
+  }
 }
