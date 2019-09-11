@@ -17,8 +17,6 @@
   }
 }
 
- 
-
 body {
   background: $background;
   height: 100%;
@@ -27,8 +25,7 @@ body {
 .content {
   grid-area: content;
 }
- 
-}
+
 .diary__Header {
   color: $textcolor;
 }
@@ -56,9 +53,6 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    &--visible {
-      display: flex;
-    }
   }
   &__button {
     border-style: none;
@@ -66,17 +60,11 @@ body {
   }
   &__footer {
     position: fixed;
-    
     bottom: 10px;
     right: 5px;
     width: 100%;
-    max-width: 100px;
-    font-size: 17px;
+    max-width: 30px;
     text-decoration: none;
-    color: #fd624d;
-    background: transparentize($color: hotpink, $amount: 0.2);
-    border-radius: 13px;
-    justify-items: center;
   }
   &__link {
     text-decoration: none;
@@ -96,8 +84,10 @@ body {
     top: 6px;
     right: 6px;
   }
+  .navigation__list--visible {
+    display: flex;
+  }
 }
- 
 
 @media (min-width: 651px) {
   .navigation__button {
@@ -134,7 +124,7 @@ body {
     font-size: 32px;
   }
 }
- 
+
 .majkel__img {
   width: 100%;
   max-width: 400px;
