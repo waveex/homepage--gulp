@@ -1,3 +1,5 @@
+![Homepage-screenshot](github/readme.png)
+
 # wtf-gulp-starter
 
 `npm install -g gulp-cli`
@@ -6,4 +8,4 @@
 
 `gulp`
 
-To publish your page using github pages use `npm run deploy`
+MY very first frontend project. 👶
